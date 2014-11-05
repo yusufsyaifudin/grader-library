@@ -12,7 +12,7 @@ You can download a copy or clone from this repository if you want. But, there ar
 
 ```
 require: {
-	"yusufs/grader" : "1.0.0"
+	"yusufs/grader": "dev-master"
 }
 ```
 
