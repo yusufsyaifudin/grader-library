@@ -3,10 +3,12 @@
   "type": "library",
   "description": "Online judge",
   "keywords": [
-  "online judge",
-  "grader",
-  "acm judge"
-  ],
+    "online judge",
+    "grader",
+    "acm judge",
+    "online judge php",
+    "laravel judge"
+    ],
   "homepage": "https://github.com/yusufs/grader",
   "license": "MIT",
   "authors": [
@@ -16,7 +18,6 @@
     "homepage": "http://yusyaif.com/"
  }
  ],
- "version" : "1.0.0",
  "require": {
     "php": ">=5.4.0"
     },
