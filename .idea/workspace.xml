@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9d5a01fd-4f74-4d9d-9233-b5f5c334980e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Yusufs/Diff.php" afterPath="$PROJECT_DIR$/src/Yusufs/Diff.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Yusufs/Grader.php" afterPath="$PROJECT_DIR$/src/Yusufs/Grader.php" />
-    </list>
+    <list default="true" id="9d5a01fd-4f74-4d9d-9233-b5f5c334980e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,7 +14,7 @@
       <file leaf-file-name="Diff.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Yusufs/Diff.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-162">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -133,12 +130,12 @@
       <option name="presentableId" value="Default" />
       <updated>1502804654937</updated>
       <workItem from="1502804657019" duration="857000" />
-      <workItem from="1503309854609" duration="70000" />
+      <workItem from="1503309854609" duration="698000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="927000" />
+    <option name="totallyTimeSpent" value="1555000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
@@ -224,7 +221,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Yusufs/Diff.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="-162">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>

@@ -34,6 +34,30 @@ class Grader
      *
      * @return array
      */
+    public static function compareFiles($program1_path, $program2_path, $options)
+    {
+        try {
+            $diff = new Diff;
+            $diff->file1 = $program1_path;
+            $diff->file2 = $program2_path;
+            $isDifferent = $diff->isDifferent($options);
+            $isSame = $diff->isSame($options);
+
+            // return
+            return [
+                'judge' => [
+                    'output_file_difference' => $isDifferent,
+                    'output_file_similarity' => $isSame
+                ]
+            ];
+
+        } catch (Exception $e) {
+            return [
+                'judge' => false
+            ];
+        }
+    }
+
     public static function compareProgram($program1, $program2, $input, $timelimit, $memorylimit)
     {
         // check file existence
