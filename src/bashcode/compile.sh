@@ -26,7 +26,7 @@ function execution_time
 
 ######## COMPILING JAVA ########
 if [[ $EXT == "java" ]]; then
-	javac $FILENAME >/dev/null 2>cerr &
+	javac $FILENAME >/dev/null 2>cerr 
 	EXITCODE=$?
 
 	echo $EXITCODE
@@ -36,7 +36,7 @@ fi
 ####### COMPILING C or C++ #############
 if [[ $EXT == "cpp" ]]; then
 
-	g++ $FILENAME -O2 -o $OUTPUT >/dev/null 2>$OUTPUT &
+	g++ $FILENAME -O2 -o $OUTPUT >/dev/null 2>$OUTPUT 
 	EXITCODE=$?
 	
 	echo "exit_code: $EXITCODE"
@@ -46,7 +46,7 @@ fi
 
 if [[ $EXT == "c" ]]; then
 
-	gcc $FILENAME -O2 -o $OUTPUT >/dev/null 2>$OUTPUT &
+	gcc $FILENAME -O2 -o $OUTPUT >/dev/null 2>$OUTPUT 
 	EXITCODE=$?
 	
 	echo "exit_code: $EXITCODE"

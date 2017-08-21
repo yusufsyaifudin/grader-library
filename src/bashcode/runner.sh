@@ -49,6 +49,6 @@ SANDBOX="${curDIR}/sandbox"
 ## output file must not bigger than 30 MB
 ## redirect input and output to attached file
 
-$SANDBOX 60000 $TIMELIMIT $MEMLIMIT 31457280 $PROGRAM < $INPUT > $OUTPUT &
+$SANDBOX 60000 $TIMELIMIT $MEMLIMIT 31457280 $PROGRAM < $INPUT > $OUTPUT 
 
 exit 0;
