@@ -11,8 +11,14 @@ You can download a copy or clone from this repository if you want. But, there ar
 
 
 ```
+"repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/andrewnagyeb/grader-library"
+    }
+  ],
 require: {
-	"yusufs/grader": "1.0"
+	"yusufs/grader": "dev-master"
 }
 ```
 
