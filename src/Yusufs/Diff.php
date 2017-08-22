@@ -32,7 +32,7 @@ class Diff {
 	{
 		$diff 	= dirname(__FILE__) . '/../bashcode/diff.sh';
 
-		$diff_query = $diff . $options . ' ' . $this->file1 . ' ' . $this->file2;
+		$diff_query = $diff . ' ' . $options . ' ' . $this->file1 . ' ' . $this->file2;
 		exec($diff_query, $diff_response);
 
 		if (empty($diff_response)) {
