@@ -200,7 +200,7 @@ class Grader
      *
      * @return array
      */
-    public static function saveScript($ext, $content, $filename = null,$quiz_id)
+    public static function saveScript($ext, $content, $filename = null,$quiz_id,$problem_id)
     {
         // check permitted extension
         if ($ext !== 'c' && $ext !== 'cpp') {
@@ -219,7 +219,7 @@ class Grader
         }
 
         $filesystem = new Filesystem();
-        $path = 'storage/scripts/' . $quiz_id . DIRECTORY_SEPARATOR;
+        $path = 'storage/scripts/' . $quiz_id . DIRECTORY_SEPARATOR . $problem_id . DIRECTORY_SEPARATOR;
 
 
         if (!$filesystem->exists($path)) {
@@ -281,14 +281,14 @@ class Grader
      *
      * @return boolean
      */
-    public static function compile($filename)
+    public static function compile($filename,$quiz_id,$problem_id)
     {
         try {
 
             $filesystem = new Filesystem();
 
             // the code
-            $code = 'storage/scripts/'  . $quiz_id . DIRECTORY_SEPARATOR . $filename;
+            $code = 'storage/scripts/'  . $quiz_id . DIRECTORY_SEPARATOR . $problem_id . DIRECTORY_SEPARATOR . $filename;
 
             // the file
             $path_parts = pathinfo($code);
