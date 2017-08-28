@@ -552,7 +552,7 @@ class Grader
     public static function saveOutput($folder_path, $content, $filename = null)
     {
         // check if file is not empty
-        if (empty($content)) {
+        if (!isset($content)) {
             return [
                 'success' => false,
                 'message' => "Content can't be empty."
