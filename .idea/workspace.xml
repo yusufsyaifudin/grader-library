@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ab18884-3b9c-4660-8cc4-60edbe8a0451" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Yusufs/Diff.php" afterPath="$PROJECT_DIR$/src/Yusufs/Diff.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Yusufs/Grader.php" afterPath="$PROJECT_DIR$/src/Yusufs/Grader.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -16,21 +16,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Diff.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Diff.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Yusufs/Diff.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
+            <state relative-caret-position="577">
               <caret line="59" column="17" lean-forward="false" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Grader.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Grader.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Yusufs/Grader.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="149" column="24" lean-forward="true" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
+            <state relative-caret-position="133">
+              <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="19" />
               <folding>
                 <element signature="e#26#70#0#PHP" expanded="true" />
               </folding>
@@ -44,6 +44,7 @@
     <findStrings>
       <find>failed</find>
       <find>Exception</find>
+      <find>storage</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -56,8 +57,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Yusufs/Grader.php" />
         <option value="$PROJECT_DIR$/src/Yusufs/Diff.php" />
+        <option value="$PROJECT_DIR$/src/Yusufs/Grader.php" />
       </list>
     </option>
   </component>
@@ -146,18 +147,17 @@
       <option name="presentableId" value="Default" />
       <updated>1504386005173</updated>
       <workItem from="1504386007436" duration="486000" />
-      <workItem from="1504388126964" duration="719000" />
+      <workItem from="1504388126964" duration="1667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1205000" />
+    <option name="totallyTimeSpent" value="2153000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1600" height="873" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.253866" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16301547" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -202,21 +202,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusufs/Grader.php">
+    <entry file="file://$PROJECT_DIR$/src/Yusufs/Diff.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="149" column="24" lean-forward="true" selection-start-line="149" selection-start-column="24" selection-end-line="149" selection-end-column="24" />
-          <folding>
-            <element signature="e#26#70#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="577">
+          <caret line="59" column="17" lean-forward="false" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Yusufs/Diff.php">
+    <entry file="file://$PROJECT_DIR$/src/Yusufs/Grader.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="59" column="17" lean-forward="false" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-          <folding />
+        <state relative-caret-position="133">
+          <caret line="24" column="19" lean-forward="false" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="19" />
+          <folding>
+            <element signature="e#26#70#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
