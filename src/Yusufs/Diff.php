@@ -35,7 +35,7 @@ class Diff {
 		$diff_query = $diff . ' ' . $options . ' ' . $this->file1 . ' ' . $this->file2;
 		exec($diff_query, $diff_response);
 
-		if (empty($diff_response)) {
+		if (!isset($diff_response)) {
 			// if diff.sh not return anything a.k.a empty then it means the output file is not different
 			$status = true;
 		} else {
@@ -57,7 +57,7 @@ class Diff {
 		$diff_query = $diff . ' ' .$options . ' ' .$this->file1 . ' ' . $this->file2;
 		exec($diff_query, $diff_response);
 
-		if (empty($diff_response)) {
+		if (!isset($diff_response)) {
 			// if diff.sh not return anything a.k.a empty then it means the output file is not different
 			$status = false;
 		} else {

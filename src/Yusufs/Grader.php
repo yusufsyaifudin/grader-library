@@ -51,7 +51,7 @@ class Grader
                 ]
             ];
 
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return [
                 'judge' => false
             ];
@@ -115,7 +115,7 @@ class Grader
                 'program2' => $program2_response
             ];
 
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
 
         }
 
@@ -147,7 +147,7 @@ class Grader
 
             try {
                 $filesystem->mkdir($path);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 return [
                     'success' => false,
                     'message' => "Can't create path to save file",
@@ -177,10 +177,10 @@ class Grader
                     'extension' => 'txt'
                 ]
             ];
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $response = [
                 'success' => false,
-                'message' => 'Exception Error',
+                'message' => '\Exception Error',
                 'detail' => [
                     'reason' => $e->getMessage()
                 ]
@@ -226,7 +226,7 @@ class Grader
 
             try {
                 $filesystem->mkdir($path);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 return [
                     'success' => false,
                     'message' => "Can't create path to save file",
@@ -261,10 +261,10 @@ class Grader
                     'extension' => $ext
                 ]
             ];
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $response = [
                 'success' => false,
-                'message' => 'Exception Error',
+                'message' => '\Exception Error',
                 'detail' => [
                     'reason' => $e->getMessage()
                 ]
@@ -308,10 +308,10 @@ class Grader
                     'message' => "File script is not exists."
                 ];
             }
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return [
                 'success' => false,
-                'message' => 'Exception Error',
+                'message' => '\Exception Error',
                 'detail' => [
                     'reason' => $e->getMessage()
                 ]
@@ -338,7 +338,7 @@ class Grader
 
             try {
                 $filesystem->mkdir('storage/compiled/');
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 return [
                     'success' => false,
                     'message' => "Can't create path to save file",
@@ -428,10 +428,10 @@ class Grader
                 ];
             }
 
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return [
                 'status' => false,
-                'message' => 'Exception Error',
+                'message' => '\Exception Error',
                 'detail' => [
                     'reason' => $e->getMessage(),
                     'program_path' => $code
@@ -458,7 +458,7 @@ class Grader
         if (!$filesystem->exists('storage/output/')) {
             try {
                 $filesystem->mkdir('storage/output/');
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 return [
                     'success' => false,
                     'message' => "Can't create path to save file",
@@ -538,10 +538,10 @@ class Grader
                 )
             ];
 
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             return [
                 'status' => false,
-                'message' => 'Exception Error',
+                'message' => '\Exception Error',
                 'detail' => [
                     'reason' => $e->getMessage()
                 ]
@@ -567,7 +567,7 @@ class Grader
 
             try {
                 $filesystem->mkdir($path);
-            } catch (Exception $e) {
+            } catch (\Exception $e) {
                 return [
                     'success' => false,
                     'message' => "Can't create path to save file",
@@ -595,10 +595,10 @@ class Grader
                     'extension' => 'txt'
                 ]
             ];
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             $response = [
                 'success' => false,
-                'message' => 'Exception Error',
+                'message' => '\Exception Error',
                 'detail' => [
                     'reason' => $e->getMessage()
                 ]
