@@ -44,7 +44,7 @@ class Grader
      *
      * @return array
      */
-    public  function compareFiles($program1_path, $program2_path, $options)
+    public function compareFiles($program1_path, $program2_path, $options)
     {
         try {
             $diff = new Diff;
@@ -68,9 +68,9 @@ class Grader
         }
     }
 
-    public function compareProgram($program1, $program2, $input, $timelimit, $memorylimit)
+    public function compareProgram($program1, $program2, $input, $timelimit, $memorylimit, $maxmemlimit, $maxtimelimit)
     {
-        
+
         // check file existence
         $filesystem = new Filesystem();
 
@@ -90,7 +90,7 @@ class Grader
             ];
         }
 
-        $input_path = $this->storage_path .'input/';
+        $input_path = $this->storage_path . 'input/';
         if (!$filesystem->exists($input_path . $input)) {
             return [
                 'success' => false,
@@ -101,10 +101,10 @@ class Grader
         // now process the program
         try {
             // first run the first program
-            $program1_response = self::run($program1, $input, $timelimit, $memorylimit);
+            $program1_response = self::run($program1, $input, $timelimit, $memorylimit, $maxmemlimit, $maxtimelimit);
 
             // run the second program with the same input
-            $program2_response = self::run($program2, $input, $timelimit, $memorylimit);
+            $program2_response = self::run($program2, $input, $timelimit, $memorylimit, $maxmemlimit, $maxtimelimit);
 
             // then check the output difference
             $output_progam1 = $program1_response['detail']['path'] . $program1_response['detail']['filename'];
@@ -151,7 +151,7 @@ class Grader
         }
 
         $filesystem = new Filesystem();
-        $path = $this->storage_path .'input/';
+        $path = $this->storage_path . 'input/';
 
         // check file existence
         if (!$filesystem->exists($path)) {
@@ -211,7 +211,7 @@ class Grader
      *
      * @return array
      */
-    public function saveScript($ext, $content, $filename = null,$quiz_id,$problem_id)
+    public function saveScript($ext, $content, $filename = null, $quiz_id, $problem_id)
     {
         // check permitted extension
         if ($ext !== 'c' && $ext !== 'cpp') {
@@ -230,7 +230,7 @@ class Grader
         }
 
         $filesystem = new Filesystem();
-        $path = $this->storage_path .'scripts/' . $quiz_id . DIRECTORY_SEPARATOR . $problem_id . DIRECTORY_SEPARATOR;
+        $path = $this->storage_path . 'scripts/' . $quiz_id . DIRECTORY_SEPARATOR . $problem_id . DIRECTORY_SEPARATOR;
 
 
         if (!$filesystem->exists($path)) {
@@ -292,14 +292,14 @@ class Grader
      *
      * @return boolean
      */
-    public  function compile($filename,$quiz_id,$problem_id)
+    public function compile($filename, $quiz_id, $problem_id)
     {
         try {
 
             $filesystem = new Filesystem();
 
             // the code
-            $code = $this->storage_path .'scripts/'  . $quiz_id . DIRECTORY_SEPARATOR . $problem_id . DIRECTORY_SEPARATOR . $filename;
+            $code = $this->storage_path . 'scripts/' . $quiz_id . DIRECTORY_SEPARATOR . $problem_id . DIRECTORY_SEPARATOR . $filename;
 
             // the file
             $path_parts = pathinfo($code);
@@ -308,7 +308,7 @@ class Grader
             $ext = $path_parts['extension'];
 
             // output
-            $output_file = $this->storage_path .'compiled/' . $filename;
+            $output_file = $this->storage_path . 'compiled/' . $filename;
 
             if ($filesystem->exists($code)) {
 
@@ -340,15 +340,15 @@ class Grader
      *
      * @return array
      */
-    private  function runCompiler($code, $language, $output_file)
+    private function runCompiler($code, $language, $output_file)
     {
         $filesystem = new Filesystem();
 
         // check if folder is exist, if not try to create it
-        if (!$filesystem->exists($this->storage_path .'compiled/')) {
+        if (!$filesystem->exists($this->storage_path . 'compiled/')) {
 
             try {
-                $filesystem->mkdir($this->storage_path .'compiled/');
+                $filesystem->mkdir($this->storage_path . 'compiled/');
             } catch (\Exception $e) {
                 return [
                     'success' => false,
@@ -459,14 +459,14 @@ class Grader
      *
      * @return array
      */
-    public  function run($program, $input_filename, $timelimit, $memorylimit)
+    public function run($program, $input_filename, $timelimit, $memorylimit, $maxmemlimit, $maxtimelimit)
     {
         $filesystem = new Filesystem();
 
         // check folder to output file
-        if (!$filesystem->exists($this->storage_path .'output/')) {
+        if (!$filesystem->exists($this->storage_path . 'output/')) {
             try {
-                $filesystem->mkdir($this->storage_path .'output/');
+                $filesystem->mkdir($this->storage_path . 'output/');
             } catch (\Exception $e) {
                 return [
                     'success' => false,
@@ -481,7 +481,7 @@ class Grader
         try {
 
             // check program file existence
-            $program = $this->storage_path .'compiled/' . $program;
+            $program = $this->storage_path . 'compiled/' . $program;
             if (!$filesystem->exists($program)) {
                 return [
                     'status' => false,
@@ -490,7 +490,7 @@ class Grader
             }
 
             // check input file existence
-            $input_file = $this->storage_path .'input/' . $input_filename;
+            $input_file = $this->storage_path . 'input/' . $input_filename;
             if (!$filesystem->exists($input_file)) {
                 return [
                     'status' => false,
@@ -502,7 +502,7 @@ class Grader
             $runner = dirname(__FILE__) . '/../bashcode/runner.sh';
 
             // output file
-            $output_path = $this->storage_path .'output/';
+            $output_path = $this->storage_path . 'output/';
             $output_filename = time() . '_output_of_' . $input_filename;
             $output_file = $output_path . $output_filename;
 
@@ -513,6 +513,8 @@ class Grader
                 $program . ' ' .
                 $input_file . ' ' .
                 $output_file . ' ' .
+                $maxtimelimit . ' ' .
+                $maxmemlimit . ' ' .
                 ' 2>&1';
 
             // exec runner via bash
