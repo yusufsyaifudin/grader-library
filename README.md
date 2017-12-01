@@ -183,12 +183,12 @@ example output
 
 ### Run the program
 
-@param program filename (the same as the script name)
-@param input filename
-@param time limit (in seconds)
-@param memory limit (in kiloBytes)
-@param max memory limit (in kiloBytes)
-@param max time limit (in seconds)
+* @param program filename (the same as the script name)
+* @param input filename
+* @param time limit (in seconds)
+* @param memory limit (in kiloBytes)
+* @param max memory limit (in kiloBytes)
+* @param max time limit (in seconds)
 
 ```
 return Yusufs\Grader::run('script_12031364091415211460.c', 'input_7204332951415211535.txt', 1, 15360, 32720, 10);
