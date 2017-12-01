@@ -1,6 +1,6 @@
 # GRADER
 
-This is a library to create an online judge system based on PHP. Now you can easily compile or even run your program from PHP with only one line of code. Do not worry about the risk of damage to the system by malicious programs, because this library uses openjudge/sandbox used in online judge system for *ACM/ICPC* training. Refer to: [https://openjudge.net/Solution/Sandbox](https://openjudge.net/Solution/Sandbox) and [https://github.com/openjudge/sandbox](https://github.com/openjudge/sandbox)
+Online Judge System library based on PHP. Now you can easily compile or even run your program from PHP with only one line of code. Do not worry about the risk of damage to the system by malicious programs, because this library uses openjudge/sandbox used in online judge system for *ACM/ICPC* training. Refer to: [https://openjudge.net/Solution/Sandbox](https://openjudge.net/Solution/Sandbox) and [https://github.com/openjudge/sandbox](https://github.com/openjudge/sandbox)
 
 keyword: open judge, online judge php, laravel online judge
 
