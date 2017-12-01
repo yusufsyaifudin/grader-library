@@ -38,6 +38,9 @@ INPUT="$4";
 ## output file
 OUTPUT="$5";
 
+## max memory limit
+MAXTIMELIMIT= "$6"
+MAXMEMLIMIT= "$7"
 
 curDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 SANDBOX="${curDIR}/sandbox"
@@ -49,6 +52,6 @@ SANDBOX="${curDIR}/sandbox"
 ## output file must not bigger than 30 MB
 ## redirect input and output to attached file
 
-$SANDBOX 60000 $TIMELIMIT $MEMLIMIT 31457280 $PROGRAM < $INPUT > $OUTPUT 
+$SANDBOX $MAXTIMELIMIT $TIMELIMIT $MEMLIMIT $MAXMEMLIMIT $PROGRAM < $INPUT > $OUTPUT
 
 exit 0;

@@ -16,7 +16,10 @@ use Yusufs\Diff;
  | Author email : yusuf.syaifudin@gmail.com
  | Author url   : http://yusyaif.com/
  | Created at   : Tuesday, November 4, 2014
- |
+ |----------------------------------------------------------
+ | Developer        : Andrew Nagyeb
+ | Developer Email  : andrewnajeeb@fci.helwan.edu.eg
+ | Developed at     : Tuesday, September 12, 2017
  |----------------------------------------------------------
 */
 
@@ -456,6 +459,8 @@ class Grader
      * @param string $input_filename --> input filename
      * @param integer $timelimit in seconds
      * @param integer $memorylimit in kilobyte
+     * @param integer $maxmemlimit in kilobyte
+     * @param integer $maxtimelimit in seconds
      *
      * @return array
      */
