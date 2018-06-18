@@ -59,7 +59,7 @@ Don't forget to make `storage` directory in the root of your project, since this
 $ mkdir storage
 ```
 
-for example if you are using laravel 4.2.* the tree structure will look like this:
+for example if you are using laravel 5.4.* the tree structure will look like this:
 
 - app
 - bootstrap
